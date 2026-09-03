@@ -40,31 +40,30 @@ public class Lista<T>{
         }
     }
 
-
     public void addFinal(T dado){
         No<T> novoNo = new No<T>(dado);
-
         if(primeiroNo == null){
             primeiroNo = novoNo;
             ultimoNo = novoNo;
-        } else {
+        }else{
             ultimoNo.setNextNo(novoNo);
             ultimoNo = novoNo;
         }
     }
 
     public void removeFinal(){
-        if (primeiroNo == null) {
+        if(primeiroNo == null){
             System.out.println("Lista vazia!");
         }else{
             System.out.println("Dado: " + ultimoNo.getDado() + " removido!");
+
             if(primeiroNo == ultimoNo){
                 primeiroNo = primeiroNo.getNextNo();
                 ultimoNo = ultimoNo.getNextNo();
-            } else {
+            }else{
                 No<T> aux = primeiroNo;
-                
-                while(aux.getNextNo() != ultimoNo){
+
+                while(aux.getNextNo() != ultimoNo) {
                     aux = aux.getNextNo();
                 }
                 ultimoNo = aux;
@@ -85,9 +84,6 @@ public class Lista<T>{
             }
         }
     }
-
-
-
 
     public void setNomeLista(String nomeLista){
         this.nomeLista = nomeLista;

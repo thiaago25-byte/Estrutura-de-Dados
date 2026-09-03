@@ -21,15 +21,7 @@ public class Principal{
         lista.imprimeLista();
         lista.removeFinal();
         lista.imprimeLista();
+
         
-        /*
-        lista.removeInicio();
-        lista.imprimeLista();
-        lista.removeInicio();
-        lista.imprimeLista();
-        lista.removeInicio();
-        lista.imprimeLista();
-        lista.removeInicio();
-        */       
     }
 }
